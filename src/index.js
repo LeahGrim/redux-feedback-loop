@@ -13,7 +13,7 @@ const feedbackReducer = (
         feeling: '', 
         understanding: '',
         support: '',
-        comments: '',
+        comment: '',
 }, 
 action) => {
     switch (action.type){
@@ -21,14 +21,15 @@ action) => {
             return {...state, feeling: (state.feeling = action.payload)};
         case 'ADD_UNDERSTANDING':
             return{...state, understanding: (state.understanding = action.payload)};
-    }
+        case 'ADD_SUPPORT':
+            return{...state, support: (state.support = action.payload)};
+        }
     return state;
 }
 
 
 //create the store object to hold all the App Info
 const storeInstance = createStore(
-
     combineReducers({
         feedbackReducer
     }),

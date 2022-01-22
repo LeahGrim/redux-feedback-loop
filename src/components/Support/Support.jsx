@@ -1,43 +1,42 @@
-import './PageTwo.css'
 import {useDispatch} from 'react-redux';
 import { Typography, Rating } from '@mui/material';
 import React, { useState } from 'react';
-function PageTwo(){
+
+function Support(){
     //set value from rating buttons 
-    const [understanding, setUnderstanding]= useState(0);
+    const [support, setSupport]= useState(0);
  
     //setup dispatch:
     const dispatch = useDispatch();
 
     //when next button is pushed
-            //(1) send "understanding" value to reducer using dispatch
+            //(1) send "support" (name) and value to reducer using dispatch
             //(2) go to next page 
     
     const onNext2Button = () => {
-        console.log('in onNextButton understanding is', understanding);
+        console.log('in onNextButton support is', support);
        
         //dispatch request:
         dispatch({
-            type: 'ADD_UNDERSTANDING',
-            payload: understanding
+            type: 'ADD_SUPPORT',
+            payload: support
         })
     }
-    
     return(
-        <>
-        <div> 
-            <div className="pageTwoHeader"> 
-            <h2> HOW ARE YOU FEELING TODAY?</h2>
+    <>
+     <div> 
+            <div className="pageHeader"> 
+            <h2> HOW WELL DO YOU FEEL SUPPORTED?</h2>
             </div>
-                    <div className= "question1">
-                    <Typography component="legend">Rate your Understanding of Content</Typography>
+                    <div className= "question">
+                    <Typography component="legend">Rate Your Feeling of Support</Typography>
                     <Rating
-                            name= "understanding"
+                            name= "feeling"
                             defaultValue={0}
                             size="large"
-                            value={understanding}
+                            value={support}
                             onChange={(event, newValue) => {
-                                setUnderstanding(newValue);
+                                setSupport(newValue);
                               }}
                         />
                     </div>
@@ -46,7 +45,7 @@ function PageTwo(){
                     </button>
         
         </div>
-        </>
+    </>
     )
 }
-export default PageTwo;
+export default Support;

@@ -1,4 +1,4 @@
-.pageOneHeader{
+.pageHeader{
     border: 2px solid blueviolet;
     background-color: darkseagreen;
     width: 50%;
@@ -7,7 +7,7 @@
     
 }
 
-.question1{
+.question{
     border: 2px solid blueviolet;
     margin: auto;
     margin-bottom: 30px;
