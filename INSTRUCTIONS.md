@@ -4,10 +4,10 @@ For this assignment, you will be creating a reflection/feedback form modeled aft
 
 ### SETUP
 
-Create your database and tables using the provided `data.sql` file. Start the server.
+[+]Create your database and tables using the provided `data.sql` file. Start the server.
 
 ```
-npm install
+[+] npm install
 npm run server
 ```
 
