@@ -46,8 +46,8 @@ function Feel(){
                         />
                     </div>
                     <Link to= "/understanding">
-                    <button className="nextButton" onClick={onNext1Button}> 
-                                            NEXT QUESTION 
+                    <button className="nextButton" onClick={onNext1Button}> <h2>
+                                            NEXT QUESTION </h2>
                     </button>
                     </Link>
         

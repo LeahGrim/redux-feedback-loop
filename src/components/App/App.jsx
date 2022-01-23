@@ -25,7 +25,7 @@ function App() {
           </h2>
           </div>
           <Link to= "/feeling">
-          <button className= "startBtn"> Start Your Reflection For the Day</button>
+          <button className= "startBtn"> <h1>Start Your Reflection For the Day</h1></button>
           </Link>
       </Route>
       

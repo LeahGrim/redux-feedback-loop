@@ -1,0 +1,9 @@
+.textField{
+    background-color: darkgray;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 16.5%;
+    margin-bottom: 10px
+
+}

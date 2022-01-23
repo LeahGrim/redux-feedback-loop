@@ -2,7 +2,7 @@ import {useDispatch} from 'react-redux';
 import { TextField  } from '@mui/material';
 import React, { useState } from 'react';
 import { HashRouter as Router, Route, Link} from 'react-router-dom';
-
+import './Comments.css'
 function Comments(){
     //set value from rating buttons 
     const [comment, setComment]= useState('');
@@ -35,8 +35,10 @@ function Comments(){
             <div className="pageHeader"> 
             <h2> WHAT IS YOUR FAVORITE SONG OF THE DAY?</h2>
             </div>
-                    <div className= "question">
+                    <div className= "textField">
                     <TextField
+
+                            id="filled-basic"
                             placeholder='Favorite Song Here'
                             value={comment}
                             onChange= {handleChange}
@@ -47,7 +49,7 @@ function Comments(){
                     </div>
                     <Link to= "/review">
                     <button className="nextButton" onClick={onNext3Button}> 
-                                            NEXT QUESTION 
+                                            <h1>NEXT QUESTION </h1>
                     </button>
                     </Link>
         </div>

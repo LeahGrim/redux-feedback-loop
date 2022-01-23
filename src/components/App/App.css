@@ -28,18 +28,25 @@ h4 {
 
 .surveyDescription{
   display: flex;
-  width: 450px;
+  width: 550px;
   height: 300px;
+  padding: 20px;
   align-items: center;
   margin: auto;
+  margin-bottom: 10px;
   line-height: 2;
+  background-color: darkgray
 }
 
  .startBtn{
   display: flex;
-   width: 250px;
-   height: 50px;
-   margin: auto;
-   align-items: center;
-   padding-left: 25px;
+  margin: auto;
+  align-items: center;
+  padding: 8px;
  }
+
+ body{
+  background-image: url("https://stonex.ca/wp/wp-content/uploads/2020/03/ST-Quartz-Black-Galaxy-e1583176610116.jpeg");
+  background: cover;
+  opacity: .75;
+}

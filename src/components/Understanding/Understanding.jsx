@@ -44,8 +44,8 @@ function Understanding(){
                         />
                     </div>
                     <Link to="/support" >
-                    <button className="nextButton" onClick={onNext2Button}> 
-                                            NEXT QUESTION 
+                    <button className="nextButton" onClick={onNext2Button}> <h2>
+                                            NEXT QUESTION  </h2>
                     </button>
                     </Link>
         </div>
