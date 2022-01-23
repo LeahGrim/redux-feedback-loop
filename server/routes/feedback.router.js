@@ -1,0 +1,32 @@
+const express = require('express');
+const router = express.Router();
+const pool = require('../modules/pool');
+
+
+// POST endpoint
+
+router.post('/',  (req, res) => {
+    let newFeedback = req.body;
+    console.log(`Adding feedback response from client`, newFeedback);
+  
+    let queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
+                     VALUES ($1, $2, $3, $4)`;
+    let queryParams= [
+        newFeedback.feeling,
+        newFeedback.understanding,
+        newFeedback.support,
+        newFeedback.comments
+    ]
+      pool.query(queryText, queryParams)
+      .then(res => {
+        console.log('Successful POST on server side', res);
+        res.sendStatus(201);
+      })
+      .catch(error => {
+        console.log(`Error adding new feedback`, error);
+        res.sendStatus(500);
+      });
+  });
+
+
+module.exports = router;

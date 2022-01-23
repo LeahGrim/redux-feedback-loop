@@ -34,11 +34,11 @@ function Feel(){
             <h2> HOW ARE YOU FEELING TODAY?</h2>
             </div>
                     <div className= "question">
-                    <Typography component="legend">Rate your Feelings</Typography>
+                    <Typography component="legend"> <h2>Rate your Feelings </h2></Typography>
                     <Rating
                             name= "feeling"
                             defaultValue={0}
-                            size="large"
+                            size="50px"
                             value={feeling}
                             onChange={(event, newValue) => {
                                 setFeeling(newValue);
