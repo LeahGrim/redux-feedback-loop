@@ -1,6 +1,7 @@
 import {useDispatch} from 'react-redux';
-import { FormControl, OutlinedInput, TextField  } from '@mui/material';
+import { TextField  } from '@mui/material';
 import React, { useState } from 'react';
+import { HashRouter as Router, Route, Link} from 'react-router-dom';
 
 function Comments(){
     //set value from rating buttons 
@@ -21,7 +22,6 @@ function Comments(){
             type: 'ADD_COMMENT',
             payload: comment
         })
-        setComment('')
     }
 
     const handleChange = event => {
@@ -45,10 +45,11 @@ function Comments(){
                     </TextField>
                        
                     </div>
+                    <Link to= "/review">
                     <button className="nextButton" onClick={onNext3Button}> 
                                             NEXT QUESTION 
                     </button>
-        
+                    </Link>
         </div>
     </>
     )

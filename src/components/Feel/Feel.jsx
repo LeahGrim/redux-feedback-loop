@@ -2,6 +2,7 @@ import './Feel.css';
 import {useDispatch} from 'react-redux';
 import { Typography, Rating } from '@mui/material';
 import React, { useState } from 'react';
+import { HashRouter as Router, Route, Link} from 'react-router-dom';
 
 function Feel(){
    //set value from rating buttons 
@@ -44,9 +45,11 @@ function Feel(){
                               }}
                         />
                     </div>
+                    <Link to= "/understanding">
                     <button className="nextButton" onClick={onNext1Button}> 
                                             NEXT QUESTION 
                     </button>
+                    </Link>
         
         </div>
         </>

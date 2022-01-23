@@ -25,3 +25,21 @@
 h4 {
   font-style: italic;
 }
+
+.surveyDescription{
+  display: flex;
+  width: 450px;
+  height: 300px;
+  align-items: center;
+  margin: auto;
+  line-height: 2;
+}
+
+ .startBtn{
+  display: flex;
+   width: 250px;
+   height: 50px;
+   margin: auto;
+   align-items: center;
+   padding-left: 25px;
+ }

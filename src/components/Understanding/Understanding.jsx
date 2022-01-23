@@ -2,6 +2,8 @@ import './Understanding.css'
 import {useDispatch} from 'react-redux';
 import { Typography, Rating } from '@mui/material';
 import React, { useState } from 'react';
+import { HashRouter as Router, Route, Link} from 'react-router-dom';
+
 function Understanding(){
     //set value from rating buttons 
     const [understanding, setUnderstanding]= useState(0);
@@ -41,10 +43,11 @@ function Understanding(){
                               }}
                         />
                     </div>
+                    <Link to="/support" >
                     <button className="nextButton" onClick={onNext2Button}> 
                                             NEXT QUESTION 
                     </button>
-        
+                    </Link>
         </div>
         </>
     )
