@@ -1,11 +1,11 @@
 const express = require('express');
-const router = express.Router();
+const feedbackRouter = express.Router();
 const pool = require('../modules/pool');
 
 
 // POST endpoint
 
-router.post('/',  (req, res) => {
+feedbackRouter.post('/',  (req, res) => {
     let newFeedback = req.body;
     console.log(`Adding feedback response from client`, newFeedback);
   
@@ -18,8 +18,8 @@ router.post('/',  (req, res) => {
         newFeedback.comments
     ]
       pool.query(queryText, queryParams)
-      .then(res => {
-        console.log('Successful POST on server side', res);
+      .then(response => {
+        console.log('Successful POST on server side', response);
         res.sendStatus(201);
       })
       .catch(error => {
@@ -29,4 +29,4 @@ router.post('/',  (req, res) => {
   });
 
 
-module.exports = router;
+module.exports = feedbackRouter;

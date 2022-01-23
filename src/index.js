@@ -6,14 +6,14 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
-//REDUCERS 
 
+//REDUCERS 
 const feedbackReducer = (
     state = {
         feeling: '', 
         understanding: '',
         support: '',
-        comment: '',
+        comments: ''
 }, 
 action) => {
     switch (action.type){
@@ -24,7 +24,14 @@ action) => {
         case 'ADD_SUPPORT':
             return{...state, support: (state.support = action.payload)};
         case 'ADD_COMMENT':
-            return{...state, comment: (state.comment = action.payload)};
+            return{...state, comments: (state.comments = action.payload)};
+        case 'EMPTY_STATE':
+            state= {
+                    feeling: '', 
+                    understanding: '',
+                    support: '',
+                    comments: ''}
+            return state
         }
     return state;
 }
