@@ -4,7 +4,7 @@ import { HashRouter as Router, Route, Link} from 'react-router-dom';
 
 function Review(){
     //grab values submitted from the client from the store 
-    const feelingSummary = useSelector(store => store.feedbackReducer )
+    const feelingSummary = useSelector(store => store.feedbackReducer)
     console.log('feelingSummary is', feelingSummary);
     
     return(
@@ -19,7 +19,6 @@ function Review(){
                 <br/> {feelingSummary.comment}</li>
         <br/>
         <button > CONFIRM RESPONSES </button>
-     
         </>
     )
 }
