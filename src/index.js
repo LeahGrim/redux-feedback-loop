@@ -23,6 +23,8 @@ action) => {
             return{...state, understanding: (state.understanding = action.payload)};
         case 'ADD_SUPPORT':
             return{...state, support: (state.support = action.payload)};
+        case 'ADD_COMMENT':
+            return{...state, comment: (state.comment = action.payload)};
         }
     return state;
 }
