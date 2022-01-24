@@ -2,10 +2,10 @@ import './Understanding.css'
 import {useDispatch} from 'react-redux';
 import { Typography, Rating } from '@mui/material';
 import React, { useState } from 'react';
-import { HashRouter as Router, Route, Link} from 'react-router-dom';
 import {useHistory} from 'react-router-dom';
 
 function Understanding(){
+    //define history so that we can use it to change pages 
     const history = useHistory();
     //set value from rating buttons 
     const [understanding, setUnderstanding]= useState(0);

@@ -5,6 +5,7 @@ import { HashRouter as Router, Route, Link} from 'react-router-dom';
 import {useHistory} from 'react-router-dom';
 
 function Support(){
+    //define history so that we can use it to change pages
     const history = useHistory();
 
     //set value from rating buttons 

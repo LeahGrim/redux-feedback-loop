@@ -1,7 +1,7 @@
 import {useDispatch} from 'react-redux';
 import { TextField  } from '@mui/material';
 import React, { useState } from 'react';
-import { HashRouter as Router, Route, Link} from 'react-router-dom';
+import { HashRouter as Router, Link} from 'react-router-dom';
 import './Comments.css'
 function Comments(){
     //set value from rating buttons 
