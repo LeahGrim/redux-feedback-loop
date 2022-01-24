@@ -2,8 +2,11 @@ import {useDispatch} from 'react-redux';
 import { Typography, Rating } from '@mui/material';
 import React, { useState } from 'react';
 import { HashRouter as Router, Route, Link} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 function Support(){
+    const history = useHistory();
+
     //set value from rating buttons 
     const [support, setSupport]= useState(0);
  
