@@ -3,8 +3,11 @@ import {useDispatch} from 'react-redux';
 import { Typography, Rating } from '@mui/material';
 import React, { useState } from 'react';
 import { HashRouter as Router, Route, Link} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 function Feel(){
+    const history = useHistory();
+
    //set value from rating buttons 
     const [feeling, setFeeling]= useState(0);
  
@@ -15,14 +18,22 @@ function Feel(){
             //(1) send "feeling" (name) and value to reducer using dispatch
             //(2) go to next page 
     
-    const onNext1Button = () => {
+    const onNext1Button = (event) => {
+        
         console.log('in onNextButton Feeling is', feeling);
-       
+        
+        //input validation
+        if (feeling=== 0){
+            alert('no shortcuts when it comes to your feelings, give us a 1-5 star value')
+           
+        }else{
         //dispatch request:
         dispatch({
             type: 'ADD_FEELING',
             payload: feeling
         })
+        history.push('/understanding')
+        }
     }
 
 
@@ -37,18 +48,19 @@ function Feel(){
                     <Typography component="legend"> Rate your Feelings </Typography>
                     <Rating
                             name= "feeling"
-                            defaultValue={0}
+                            defaultValue={1}
                             value={feeling}
+                            required
                             onChange={(event, newValue) => {
                                 setFeeling(newValue);
                               }}
                         />
                     </div>
-                    <Link to= "/understanding">
+                    
                     <button className="nextButton" onClick={onNext1Button}> <h2>
                                             NEXT QUESTION </h2>
                     </button>
-                    </Link>
+ 
         
         </div>
         </>

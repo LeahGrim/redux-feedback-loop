@@ -16,12 +16,19 @@ function Support(){
     
     const onNext2Button = () => {
         console.log('in onNextButton support is', support);
-       
+        //input validation
+        if (support=== 0){
+            alert('no shortcuts when it comes to your feelings, give us a 1-5 star value')
+           
+        } else{
         //dispatch request:
         dispatch({
             type: 'ADD_SUPPORT',
             payload: support
         })
+        history.push('/comments')
+
+        }
     }
     return(
     <>
@@ -41,11 +48,11 @@ function Support(){
                               }}
                         />
                     </div>
-                    <Link to= "/comments">
+                 
                     <button className="nextButton" onClick={onNext2Button}> <h2>
                                             NEXT QUESTION </h2>
                     </button>
-                    </Link>
+                  
         </div>
     </>
     )
