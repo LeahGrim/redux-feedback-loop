@@ -17,14 +17,20 @@ function Understanding(){
     
     const onNext2Button = () => {
         console.log('in onNextButton understanding is', understanding);
+       //input validation
+       if (understanding=== 0){
+        alert('no shortcuts when it comes to your feelings, give us a 1-5 star value')
        
+    }else{
         //dispatch request:
         dispatch({
             type: 'ADD_UNDERSTANDING',
             payload: understanding
         })
+        history.push('/support')
+
     }
-    
+}
     return(
         <>
         <div> 
