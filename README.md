@@ -10,11 +10,10 @@ This version uses React, Redux, Express, Passport, and PostgreSQL (a full list o
 - [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
-- [Acknowledgements](#acknowledgements)
 - [Contacts](#contacts)
 
 ## Description
-An App Designed to Survey Users on State of Being
+An App Designed to Survey Users on State of Being.
 
 ## Screenshots
 Welcome Page: 
@@ -49,9 +48,6 @@ Survey Summary:
 
 ## Installation
 Fork and clone repo. Initialize the database with the code from database.sql In the terminal: npm install npm run server npm run client to automatically launch the app in a browser
-
-## Acknowledgements
-IOC World Bird List & Flickr API
 
 ## Contacts
 <a href="https://www.linkedin.com/in/leah-grim-846875218/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
