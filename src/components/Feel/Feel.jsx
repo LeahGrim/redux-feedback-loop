@@ -42,6 +42,7 @@ function Feel(){
         <div> 
             <div className="pageHeader"> 
             <h2> HOW ARE YOU FEELING TODAY?</h2>
+            <h3> Use this as your opportunity to lay it all out there</h3>
             </div>
                     <div className= "question">
                     <Typography component="legend"> Rate your Feelings </Typography>

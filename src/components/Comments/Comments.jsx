@@ -33,7 +33,7 @@ function Comments(){
     <>
      <div> 
             <div className="pageHeader"> 
-            <h2> WHAT IS YOUR FAVORITE SONG OF THE DAY?</h2>
+            <h2> WHAT IS YOUR FAVORITE SONG OF THE DAY? </h2>
             </div>
                     <div className= "textField">
                     <TextField

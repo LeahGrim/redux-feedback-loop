@@ -4,7 +4,6 @@ const pool = require('../modules/pool');
 
 
 // POST endpoint
-
 feedbackRouter.post('/',  (req, res) => {
     let newFeedback = req.body;
     console.log(`Adding feedback response from client`, newFeedback);
