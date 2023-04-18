@@ -8,13 +8,14 @@ feedbackRouter.post('/',  (req, res) => {
     let newFeedback = req.body;
     console.log(`Adding feedback response from client`, newFeedback);
   
-    let queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
-                     VALUES ($1, $2, $3, $4)`;
+    let queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments", "memory")
+                     VALUES ($1, $2, $3, $4, $5)`;
     let queryParams= [
         newFeedback.feeling,
         newFeedback.understanding,
         newFeedback.support,
-        newFeedback.comments
+        newFeedback.comments,
+        newFeedback.memory
     ]
       pool.query(queryText, queryParams)
       .then(response => {

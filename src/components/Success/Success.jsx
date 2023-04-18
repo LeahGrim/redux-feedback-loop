@@ -7,7 +7,7 @@ function Success (){
             <h1> Thank you for taking the time to complete this questionnaire. </h1>
         </div>
         <Link to= "/">
-        <button> <h3> TAKE ME BACK TO COMPLETE ANOTHER SURVEY</h3></button>
+        <button> <h3> BACK TO SURVEY HOMEPAGE</h3></button>
         </Link>
         </>
     )

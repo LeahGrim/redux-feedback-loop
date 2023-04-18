@@ -13,7 +13,8 @@ const feedbackReducer = (
         feeling: '', 
         understanding: '',
         support: '',
-        comments: ''
+        comments: '',
+        memory:''
 }, 
 action) => {
     switch (action.type){
@@ -25,12 +26,15 @@ action) => {
             return{...state, support: (state.support = action.payload)};
         case 'ADD_COMMENT':
             return{...state, comments: (state.comments = action.payload)};
+        case 'ADD MEMORY':
+            return{...state, memory: (state.memory = action.payload)};
         case 'EMPTY_STATE':
             state= {
                     feeling: '', 
                     understanding: '',
                     support: '',
-                    comments: ''}
+                    comments: '',
+                    memory:''}
             return state
         }
     return state;

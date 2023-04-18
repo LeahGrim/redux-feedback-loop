@@ -6,7 +6,7 @@ import './Comments.css'
 function Comments(){
     //set value from rating buttons 
     const [comment, setComment]= useState('');
- 
+    const [memory, setMemory] = useState('');
     //setup dispatch:
     const dispatch = useDispatch();
 
@@ -20,7 +20,7 @@ function Comments(){
         //dispatch request:
         dispatch({
             type: 'ADD_COMMENT',
-            payload: comment
+            payload: comment, memory
         })
     }
 
@@ -29,9 +29,16 @@ function Comments(){
         setComment(event.target.value)
     }
 
+
+    const handleChange2 = event => {
+
+        setMemory(event.target.value)
+    }
+
     return(
     <>
-     <div> 
+     <div>
+          <div> 
             <div className="pageHeader"> 
             <h2> WHAT IS YOUR FAVORITE SONG OF THE DAY? </h2>
             </div>
@@ -47,12 +54,31 @@ function Comments(){
                     </TextField>
                        
                     </div>
+
+                    <div className="pageHeader"> 
+            <h2> WHAT IS SOMETHING YOU WANT TO REMEMBER ABOUT TODAY? </h2>
+            </div>
+                    <div className= "textField">
+                    <TextField
+
+                            id="filled-basic"
+                            placeholder='Memory Here'
+                            value={memory}
+                            onChange= {handleChange2}
+                            
+                                       >
+                            
+                    </TextField>
+                       
+                    </div>
                     <Link to= "/review">
                     <button className="nextButton" onClick={onNext3Button}> 
-                                            <h1>NEXT QUESTION </h1>
+                                            <h1> NEXT </h1>
                     </button>
                     </Link>
+        
         </div>
+    </div>
     </>
     )
 }

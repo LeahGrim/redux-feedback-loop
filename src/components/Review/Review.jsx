@@ -18,7 +18,8 @@ function Review(){
             feeling: feelingSummary.feeling,
             understanding: feelingSummary.understanding,
             support: feelingSummary.support,
-            comments: feelingSummary.comments
+            comments: feelingSummary.comments, 
+            memory: feelingSummary.memory
             }
     
         const saveToDatabase = () => {
@@ -48,6 +49,8 @@ function Review(){
         
         <h1> Favorite song of the day?
                 <br/> {feelingSummary.comments}</h1>
+         <h1> Memory About Today: 
+                <br/> {feelingSummary.memory}</h1>
         <br/>
         <Link to="/success">
         <button className="confirmBtn" onClick={saveToDatabase}> <h1>CONFIRM RESPONSES </h1></button>
