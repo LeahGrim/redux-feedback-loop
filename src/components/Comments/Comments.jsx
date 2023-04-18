@@ -20,7 +20,11 @@ function Comments(){
         //dispatch request:
         dispatch({
             type: 'ADD_COMMENT',
-            payload: comment, memory
+            payload: comment
+        })
+        dispatch({
+            type: 'ADD_MEMORY',
+            payload: memory
         })
     }
 
