@@ -16,7 +16,7 @@ function Comments(){
     
     const onNext3Button = () => {
         console.log('in onNextButton favorite Song is', comment);
-       
+        console.log('memory is', memory);
         //dispatch request:
         dispatch({
             type: 'ADD_COMMENT',
