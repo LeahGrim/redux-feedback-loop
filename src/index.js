@@ -8,6 +8,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
 //REDUCERS 
+// if you want to add another state, make sure it corresponds to database table
 const feedbackReducer = (
     state = {
         feeling: '', 
